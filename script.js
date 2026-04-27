@@ -78,3 +78,25 @@ sections.forEach(sec => {
 sec.style.opacity = "0";
 sec.style.transform = "translateY(40px)";
 });
+window.addEventListener("load", ()=>{
+document.getElementById("loader").style.display="none";
+});
+const images = document.querySelectorAll(".gallery-grid img");
+const modal = document.getElementById("imgModal");
+const modalImg = document.getElementById("modalImg");
+const closeBtn = document.querySelector(".close");
+
+images.forEach(img=>{
+img.addEventListener("click", ()=>{
+modal.style.display="flex";
+modalImg.src = img.src;
+});
+});
+
+closeBtn.onclick = ()=> modal.style.display="none";
+
+modal.onclick = (e)=>{
+if(e.target === modal){
+modal.style.display="none";
+}
+};
