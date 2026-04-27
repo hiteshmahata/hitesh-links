@@ -6,7 +6,9 @@
 
 <title>Hitesh Kumar Mahata</title>
 
-<link rel="stylesheet" href="2-style.css">
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -15,118 +17,202 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 <body>
 
-<!-- BACKGROUND BUBBLES -->
-<div class="bg">
-<span></span><span></span><span></span><span></span>
-<span></span><span></span><span></span><span></span>
+<!-- ===== NAVBAR ===== -->
+<header class="header">
+<nav class="nav container">
+
+<h2 class="logo">Hitesh</h2>
+
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#interests">Interests</a></li>
+<li><a href="#social">Social</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+<div class="menu-btn">
+<i class="fas fa-bars"></i>
 </div>
 
-<!-- NAV -->
-<nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#interests">Interests</a>
-<a href="#social">Social</a>
-<a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
 </nav>
-<!-- HERO -->
+</header>
+
+<!-- ===== HERO ===== -->
 <section class="hero" id="home">
+<div class="hero-content container">
+
 <h1>Hitesh Kumar Mahata</h1>
-<p id="typing"></p>
+
+<h3>I am <span id="typing"></span></h3>
+
+<p>
+BCA Student | Tech Learner | Graphic Designer  
+Building modern and clean web experiences.
+</p>
+
+<a href="#contact" class="btn">Hire Me</a>
+
+</div>
 </section>
-<!-- ABOUT -->
-<section class="about" id="about">
+
+<!-- ===== ABOUT ===== -->
+<section class="about container" id="about">
+
+<div class="section-title">
 <h2>About Me</h2>
+</div>
+
+<div class="about-content">
+
+<div class="about-text">
 <p>
 Hi, I am Hitesh Kumar Mahata, a BCA student and tech learner.
-I enjoy video editing and graphic designing. I love exploring new technologies and improving my skills every day.
+I enjoy video editing and graphic designing.
+I am always learning new technologies and improving my skills.
 </p>
+</div>
+
+<div class="about-card">
+<h3>Quick Info</h3>
+<ul>
+<li>🎓 BCA Student</li>
+<li>💻 Web Learner</li>
+<li>🎬 Video Editor</li>
+<li>🎨 Designer</li>
+</ul>
+</div>
+
+</div>
+
 </section>
-<!-- SKILLS -->
-<section class="skills" id="skills">
+
+<!-- ===== SKILLS ===== -->
+<section class="skills container" id="skills">
+
+<div class="section-title">
 <h2>My Skills</h2>
+</div>
 
-<div class="skill">HTML</div>
-<div class="skill">CSS</div>
-<div class="skill">JavaScript</div>
+<div class="skills-grid">
 
-</section>
-<!-- INTERESTS -->
-<section class="interests" id="interests">
-<h2>What I Like</h2>
+<div class="skill-card">HTML</div>
+<div class="skill-card">CSS</div>
+<div class="skill-card">JavaScript</div>
 
-<div class="interest">🎬 Video Editing</div>
-<div class="interest">🎨 Graphic Designing</div>
-<div class="interest">💻 Learning New Tech</div>
-<div class="interest">📱 Exploring Apps & Tools</div>
+</div>
 
 </section>
 
-<!-- SOCIAL -->
-<section class="social" id="social">
+<!-- ===== INTERESTS ===== -->
+<section class="interests container" id="interests">
+
+<div class="section-title">
+<h2>My Interests</h2>
+</div>
+
+<div class="interest-grid">
+
+<div class="interest-card">🎬 Video Editing</div>
+<div class="interest-card">🎨 Graphic Design</div>
+<div class="interest-card">💻 Tech Learning</div>
+<div class="interest-card">📱 Apps & Tools</div>
+
+</div>
+
+</section>
+
+<!-- ===== SOCIAL (ALL LINKS KEPT) ===== -->
+<section class="social container" id="social">
+
+<div class="section-title">
 <h2>My Social Links</h2>
+</div>
 
-<a href="https://fb.openinapp.co/57fgf" target="_blank">
-    <i class="fab fa-facebook"></i>
+<div class="social-grid">
+
+<a href="https://fb.openinapp.co/57fgf" target="_blank" class="social-card">
+<i class="fab fa-facebook"></i>
+<span>Facebook</span>
 </a>
 
-<a href="https://api.whatsapp.com/send?phone=918918536733&text=Hi" target="_blank">
-    <i class="fab fa-whatsapp"></i>
+<a href="https://api.whatsapp.com/send?phone=918918536733&text=Hi" target="_blank" class="social-card">
+<i class="fab fa-whatsapp"></i>
+<span>WhatsApp</span>
 </a>
 
-<a href="https://insta.openinapp.co/m21yk" target="_blank">
-    <i class="fab fa-instagram"></i>
+<a href="https://insta.openinapp.co/m21yk" target="_blank" class="social-card">
+<i class="fab fa-instagram"></i>
+<span>Instagram</span>
 </a>
 
-<a href="https://linkedin.openinapp.co/6ybk0" target="_blank">
-    <i class="fab fa-linkedin"></i>
+<a href="https://linkedin.openinapp.co/6ybk0" target="_blank" class="social-card">
+<i class="fab fa-linkedin"></i>
+<span>LinkedIn</span>
 </a>
 
-<a href="https://yt.openinapp.co/rvdof" target="_blank">
-    <i class="fab fa-youtube"></i>
+<a href="https://yt.openinapp.co/rvdof" target="_blank" class="social-card">
+<i class="fab fa-youtube"></i>
+<span>YouTube</span>
 </a>
 
-<a href="https://spotify.openinapp.co/7dn6a" target="_blank">
-    <i class="fab fa-spotify"></i>
+<a href="https://spotify.openinapp.co/7dn6a" target="_blank" class="social-card">
+<i class="fab fa-spotify"></i>
+<span>Spotify</span>
 </a>
+
+</div>
+
 </section>
 
-<!-- GALLERY -->
-<section id="gallery">
-<h2 style="text-align:center">My Gallery</h2>
+<!-- ===== GALLERY ===== -->
+<section class="gallery container" id="gallery">
+
+<div class="section-title">
+<h2>My Gallery</h2>
+</div>
 
 <div class="gallery-grid">
-<img src="photo 1.jpg" onclick="openModal(this)">
-<img src="photo 2.jpg" onclick="openModal(this)">
-<img src="photo 3.jpg" onclick="openModal(this)">
-<img src="photo 4.jpg" onclick="openModal(this)">
-<img src="photo 5.jpg" onclick="openModal(this)">
-<img src="photo 6.jpeg" onclick="openModal(this)">
-<img src="photo 7.jpg" onclick="openModal(this)">
-<img src="photo 8.jpg" onclick="openModal(this)">
-<img src="photo 9.jpg" onclick="openModal(this)">
-<img src="photo 10.jpg" onclick="openModal(this)">
-<img src="photo 11.jpg" onclick="openModal(this)">
-</div>
 
-<div id="imgModal" class="modal" onclick="closeModal()">
-<span class="close">&times;</span>
-<img class="modal-content" id="fullImg">
+<img src="photo 1.jpg">
+<img src="photo 2.jpg">
+<img src="photo 3.jpg">
+<img src="photo 4.jpg">
+<img src="photo 5.jpg">
+<img src="photo 6.jpeg">
+<img src="photo 7.jpg">
+<img src="photo 8.jpg">
+<img src="photo 9.jpg">
+<img src="photo 10.jpg">
+<img src="photo 11.jpg">
+
 </div>
 
 </section>
-<!-- CONTACT -->
-<section class="contact" id="contact">
+
+<!-- ===== CONTACT ===== -->
+<section class="contact container" id="contact">
+
+<div class="section-title">
 <h2>Contact Me</h2>
+</div>
+
+<div class="contact-box">
+
 <p>Email: <a href="mailto:mahatahitesh05@gmail.com">mahatahitesh05@gmail.com</a></p>
+
+</div>
+
 </section>
-<footer>
-<p>🤟</p>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+<p>© 2026 Hitesh Kumar Mahata</p>
 </footer>
 
-<script src="3-script.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
