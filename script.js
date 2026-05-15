@@ -1,14 +1,12 @@
-// ===== MOBILE MENU =====
-const menuBtn = document.querySelector(".menu-btn");
-const navLinks = document.querySelector(".nav-links");
+// TYPING EFFECT
 
-menuBtn.addEventListener("click", () => {
-navLinks.classList.toggle("active");
-});
-
-
-// ===== TYPING EFFECT =====
-const texts = ["Student", "Tech Learner", "Graphic Designer", "Video Editor"];
+const texts = [
+"Tech Enthusiast",
+"Video Editor",
+"Graphic Designer",
+"Gamer",
+"Anime Lover"
+];
 
 let count = 0;
 let index = 0;
@@ -29,74 +27,27 @@ document.getElementById("typing").textContent = letter;
 if(letter.length === currentText.length){
 count++;
 index = 0;
-setTimeout(type, 1200);
+setTimeout(type, 1000);
 }else{
-setTimeout(type, 100);
+setTimeout(type, 120);
 }
 
 })();
 
+// IMAGE MODAL
 
-// ===== SMOOTH SCROLL =====
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-anchor.addEventListener("click", function(e){
-e.preventDefault();
+function openModal(img){
 
-document.querySelector(this.getAttribute("href")).scrollIntoView({
-behavior: "smooth"
-});
+document.getElementById("imgModal").style.display = "flex";
 
-// mobile menu auto close
-navLinks.classList.remove("active");
+document.getElementById("fullImg").src = img.src;
 
-});
-});
-
-
-// ===== SCROLL ANIMATION =====
-const sections = document.querySelectorAll("section");
-
-window.addEventListener("scroll", () => {
-let triggerBottom = window.innerHeight * 0.85;
-
-sections.forEach(sec => {
-let boxTop = sec.getBoundingClientRect().top;
-
-if(boxTop < triggerBottom){
-sec.style.opacity = "1";
-sec.style.transform = "translateY(0)";
-}else{
-sec.style.opacity = "0";
-sec.style.transform = "translateY(40px)";
+document.body.style.overflow = "hidden";
 }
-});
-});
 
+function closeModal(){
 
-// ===== INITIAL STATE =====
-sections.forEach(sec => {
-sec.style.opacity = "0";
-sec.style.transform = "translateY(40px)";
-});
-window.addEventListener("load", ()=>{
-document.getElementById("loader").style.display="none";
-});
-const images = document.querySelectorAll(".gallery-grid img");
-const modal = document.getElementById("imgModal");
-const modalImg = document.getElementById("modalImg");
-const closeBtn = document.querySelector(".close");
+document.getElementById("imgModal").style.display = "none";
 
-images.forEach(img=>{
-img.addEventListener("click", ()=>{
-modal.style.display="flex";
-modalImg.src = img.src;
-});
-});
-
-closeBtn.onclick = ()=> modal.style.display="none";
-
-modal.onclick = (e)=>{
-if(e.target === modal){
-modal.style.display="none";
+document.body.style.overflow = "auto";
 }
-};
