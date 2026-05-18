@@ -1,11 +1,16 @@
+// ==========================
 // TYPING EFFECT
+// ==========================
 
 const words = [
-  "Tech Enthusiast",
-  "Video Editor",
-  "Graphic Designer",
-  "Gamer",
-  "Anime Lover"
+
+"Tech Enthusiast",
+"Video Editor",
+"Graphic Designer",
+"Gamer",
+"Anime Lover",
+"Creative Designer"
+
 ];
 
 let i = 0;
@@ -13,142 +18,315 @@ let j = 0;
 let currentWord = "";
 let isDeleting = false;
 
-function typeEffect() {
+function typeEffect(){
 
-  currentWord = words[i];
+currentWord = words[i];
 
-  if (!isDeleting) {
+if(!isDeleting){
 
-    document.getElementById("typing").textContent =
-      currentWord.substring(0, j + 1);
+document.getElementById("typing").textContent =
+currentWord.substring(0, j + 1);
 
-    j++;
+j++;
 
-    if (j === currentWord.length) {
+if(j === currentWord.length){
 
-      isDeleting = true;
+isDeleting = true;
 
-      setTimeout(typeEffect, 1200);
+setTimeout(typeEffect, 1500);
 
-      return;
-    }
+return;
 
-  } else {
+}
 
-    document.getElementById("typing").textContent =
-      currentWord.substring(0, j - 1);
+}
 
-    j--;
+else{
 
-    if (j === 0) {
+document.getElementById("typing").textContent =
+currentWord.substring(0, j - 1);
 
-      isDeleting = false;
+j--;
 
-      i++;
+if(j === 0){
 
-      if (i === words.length) {
-        i = 0;
-      }
+isDeleting = false;
 
-    }
+i++;
 
-  }
+if(i === words.length){
 
-  setTimeout(typeEffect, isDeleting ? 60 : 120);
+i = 0;
+
+}
+
+}
+
+}
+
+setTimeout(typeEffect, isDeleting ? 60 : 120);
 
 }
 
 typeEffect();
 
 
+// ==========================
 // IMAGE MODAL
+// ==========================
 
-function openModal(img) {
+function openModal(img){
 
-  const modal = document.getElementById("imgModal");
-  const modalImg = document.getElementById("fullImg");
+const modal = document.getElementById("imgModal");
 
-  modal.style.display = "flex";
+const modalImg = document.getElementById("fullImg");
 
-  modalImg.src = img.src;
+modal.style.display = "flex";
 
-  document.body.style.overflow = "hidden";
+modalImg.src = img.src;
+
+document.body.style.overflow = "hidden";
 
 }
 
 
+// ==========================
 // CLOSE MODAL
+// ==========================
 
-function closeModal() {
+function closeModal(){
 
-  const modal = document.getElementById("imgModal");
+const modal = document.getElementById("imgModal");
 
-  modal.style.display = "none";
+modal.style.display = "none";
 
-  document.body.style.overflow = "auto";
+document.body.style.overflow = "auto";
 
 }
 
 
-// CLOSE WHEN CLICK OUTSIDE IMAGE
+// ==========================
+// CLICK OUTSIDE TO CLOSE
+// ==========================
 
-window.onclick = function(event) {
+document.getElementById("imgModal")
+.addEventListener("click", function(e){
 
-  const modal = document.getElementById("imgModal");
+if(e.target.id === "imgModal"){
 
-  const modalImg = document.getElementById("fullImg");
+closeModal();
 
-  if (event.target === modal) {
+}
 
-    modal.style.display = "none";
-
-    document.body.style.overflow = "auto";
-
-  }
-
-};
+});
 
 
-// SCROLL ANIMATION
+// ==========================
+// ESC BUTTON CLOSE
+// ==========================
+
+document.addEventListener("keydown", function(e){
+
+if(e.key === "Escape"){
+
+closeModal();
+
+}
+
+});
+
+
+// ==========================
+// SMOOTH SCROLL ANIMATION
+// ==========================
 
 const sections = document.querySelectorAll("section");
 
+const observer = new IntersectionObserver(
+
+(entries) => {
+
+entries.forEach((entry) => {
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+},
+
+{
+threshold:0.15
+}
+
+);
+
+sections.forEach((section) => {
+
+section.classList.add("hidden");
+
+observer.observe(section);
+
+});
+
+
+// ==========================
+// FLOATING CURSOR GLOW
+// ==========================
+
+const glow = document.createElement("div");
+
+glow.classList.add("cursor-glow");
+
+document.body.appendChild(glow);
+
+document.addEventListener("mousemove", (e) => {
+
+glow.style.left = e.clientX + "px";
+
+glow.style.top = e.clientY + "px";
+
+});
+
+
+// ==========================
+// NAVBAR ACTIVE LINK
+// ==========================
+
+const navLinks = document.querySelectorAll("nav a");
+
 window.addEventListener("scroll", () => {
 
-  sections.forEach(section => {
+let current = "";
 
-    const top = section.getBoundingClientRect().top;
+sections.forEach((section) => {
 
-    if (top < window.innerHeight - 100) {
+const sectionTop = section.offsetTop;
 
-      section.style.opacity = "1";
-      section.style.transform = "translateY(0px)";
+if(scrollY >= sectionTop - 200){
 
-    }
+current = section.getAttribute("id");
 
-  });
+}
+
+});
+
+navLinks.forEach((link) => {
+
+link.classList.remove("active");
+
+if(link.getAttribute("href") === "#" + current){
+
+link.classList.add("active");
+
+}
+
+});
 
 });
 
 
-// INITIAL SECTION STYLE
+// ==========================
+// PAGE LOADER EFFECT
+// ==========================
 
-sections.forEach(section => {
+window.addEventListener("load", () => {
 
-  section.style.opacity = "0";
-  section.style.transform = "translateY(80px)";
-  section.style.transition = "all 0.8s ease";
+document.body.classList.add("loaded");
 
 });
 
 
-// LOAD FIRST SECTION
+// ==========================
+// PARALLAX EFFECT
+// ==========================
 
-window.onload = () => {
+window.addEventListener("scroll", () => {
 
-  document.querySelector(".hero").style.opacity = "1";
+const scrollY = window.scrollY;
 
-  document.querySelector(".hero").style.transform =
-  "translateY(0px)";
+document.querySelector(".bg-animation")
+.style.transform = `translateY(${scrollY * 0.2}px)`;
 
-};
+});
+
+
+// ==========================
+// IMAGE HOVER 3D EFFECT
+// ==========================
+
+const galleryImages =
+document.querySelectorAll(".gallery-grid img");
+
+galleryImages.forEach((img) => {
+
+img.addEventListener("mousemove", (e) => {
+
+const rect = img.getBoundingClientRect();
+
+const x = e.clientX - rect.left;
+
+const y = e.clientY - rect.top;
+
+const centerX = rect.width / 2;
+
+const centerY = rect.height / 2;
+
+const rotateX = ((y - centerY) / 20);
+
+const rotateY = ((centerX - x) / 20);
+
+img.style.transform =
+`perspective(1000px)
+rotateX(${rotateX}deg)
+rotateY(${rotateY}deg)
+scale(1.05)`;
+
+});
+
+img.addEventListener("mouseleave", () => {
+
+img.style.transform =
+"perspective(1000px) rotateX(0) rotateY(0) scale(1)";
+
+});
+
+});
+
+
+// ==========================
+// BUTTON RIPPLE EFFECT
+// ==========================
+
+const buttons = document.querySelectorAll(".btn");
+
+buttons.forEach((btn) => {
+
+btn.addEventListener("click", function(e){
+
+const circle = document.createElement("span");
+
+circle.classList.add("ripple");
+
+this.appendChild(circle);
+
+const x = e.clientX - e.target.offsetLeft;
+
+const y = e.clientY - e.target.offsetTop;
+
+circle.style.left = `${x}px`;
+
+circle.style.top = `${y}px`;
+
+setTimeout(() => {
+
+circle.remove();
+
+}, 600);
+
+});
+
+});
