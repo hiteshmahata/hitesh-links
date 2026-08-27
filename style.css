@@ -640,3 +640,148 @@ footer{
     }
 
 }
+/* ==========================
+   SOMETHING MORE - PRIVATE CONTENT
+========================== */
+
+.something-more-content{
+    display:none;
+    max-width:1100px;
+    margin:35px auto 0;
+    opacity:0;
+    transform:translateY(25px);
+}
+
+.something-more-content.unlocked{
+    display:block;
+    animation:privateReveal .8s ease forwards;
+}
+
+@keyframes privateReveal{
+    0%{
+        opacity:0;
+        transform:translateY(25px);
+    }
+
+    100%{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+/* PRIVATE INTRO */
+
+.private-intro{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.unlock-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:7px 14px;
+    border-radius:50px;
+    background:rgba(0,210,255,.10);
+    border:1px solid rgba(0,210,255,.25);
+    color:#00d2ff;
+    font-size:13px;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+.private-intro h3{
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+.private-intro p{
+    max-width:700px;
+    margin:auto;
+    color:#cfcfcf;
+    line-height:1.7;
+}
+
+
+/* PRIVATE CARDS */
+
+.private-card{
+    padding:28px;
+    margin-bottom:18px;
+    border-radius:22px;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(14px);
+    text-align:center;
+    transition:.35s;
+}
+
+.private-card:hover{
+    transform:translateY(-5px);
+    border-color:rgba(0,210,255,.30);
+    box-shadow:0 10px 30px rgba(0,210,255,.10);
+}
+
+.private-card-icon{
+    width:55px;
+    height:55px;
+    margin:0 auto 15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:rgba(0,210,255,.10);
+    color:#00d2ff;
+    font-size:22px;
+}
+
+.private-card h3{
+    font-size:22px;
+    margin-bottom:8px;
+}
+
+.private-card p{
+    color:#cfcfcf;
+    line-height:1.7;
+    margin-bottom:18px;
+}
+
+.private-open-btn{
+    padding:10px 22px;
+    border:1px solid rgba(0,210,255,.30);
+    border-radius:50px;
+    background:rgba(0,210,255,.08);
+    color:#00d2ff;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.private-open-btn:hover{
+    background:#00d2ff;
+    color:#07111f;
+    transform:translateY(-2px);
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .something-more-content{
+        margin-top:25px;
+    }
+
+    .private-intro h3{
+        font-size:25px;
+    }
+
+    .private-card{
+        padding:22px 18px;
+    }
+
+    .private-card h3{
+        font-size:20px;
+    }
+}

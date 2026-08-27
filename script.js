@@ -175,62 +175,54 @@ images.forEach(function(img){
    SOMETHING MORE - DOB UNLOCK
 ========================== */
 
-function unlockSomethingMore(){
+function unlockSomethingMore() {
 
     const dobInput = document.getElementById("dob");
     const message = document.getElementById("dob-message");
+    const privateContent = document.getElementById("something-more-content");
 
-    if(!dobInput || !message) return;
+    if (!dobInput || !message || !privateContent) return;
 
     const enteredDOB = dobInput.value;
 
-    if(!enteredDOB){
+    if (!enteredDOB) {
 
-        message.textContent =
-            "Please enter the date first.";
-
+        message.textContent = "Please enter the date first.";
         message.style.color = "#ff6b6b";
 
         return;
     }
 
+    // Your DOB: YYYY-MM-DD
+    const correctDOB = "2005-06-12";
 
-    /*
-       IMPORTANT:
-       Yahan YOUR-DOB ko apni actual DOB se replace karna hai.
-
-       Format:
-       YYYY-MM-DD
-
-       Example:
-       2000-01-25
-    */
-
-   const correctDOB = "2005-06-12";
-
-
-    if(enteredDOB === correctDOB){
+    if (enteredDOB === correctDOB) {
 
         message.textContent =
             "Access granted. Welcome to the other side.";
 
         message.style.color = "#00d2ff";
 
-        setTimeout(function(){
+        privateContent.classList.add("unlocked");
 
-            alert("Something More unlocked!");
+        setTimeout(function () {
 
-        },300);
+            privateContent.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
 
-    }else{
+        }, 500);
+
+    } else {
 
         message.textContent =
             "That doesn't seem right. Try again.";
 
         message.style.color = "#ff6b6b";
 
+        privateContent.classList.remove("unlocked");
     }
-
 }
 /* ==========================
    SOMETHING MORE SHOW / HIDE
