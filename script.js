@@ -538,3 +538,277 @@ function closeIfYouLikeMe() {
         document.body.style.overflow = "";
     }, 350);
 }
+/* ==========================
+   PRIVATE CORNER
+========================== */
+
+function openPrivateCorner() {
+
+    const existing =
+        document.getElementById("private-corner-panel");
+
+    if (existing) {
+        closePrivateCorner();
+        return;
+    }
+
+    const panel = document.createElement("div");
+
+    panel.id = "private-corner-panel";
+    panel.className = "private-detail-panel";
+
+    panel.innerHTML = `
+        <div class="private-detail-inner">
+
+            <button
+                type="button"
+                class="private-detail-close"
+                onclick="closePrivateCorner()"
+            >
+                &times;
+            </button>
+
+            <div class="private-detail-icon">
+                <i class="fas fa-lock"></i>
+            </div>
+
+            <span class="unlock-badge">
+                <i class="fas fa-lock"></i>
+                Private Corner
+            </span>
+
+            <h2>Ek aur level...</h2>
+
+            <p class="private-detail-intro">
+                Agar tum yahan tak aaye ho, to tum genuinely
+                mujhe thoda aur jaan-na chahte ho.
+                Is section ke liye ek custom password chahiye.
+            </p>
+
+            <div class="private-password-box">
+
+                <label for="private-password">
+                    Password enter karo
+                </label>
+
+                <input
+                    type="password"
+                    id="private-password"
+                    placeholder="Enter password"
+                    autocomplete="off"
+                >
+
+                <button
+                    type="button"
+                    class="private-open-btn"
+                    onclick="unlockPrivateCorner()"
+                >
+                    Unlock Private Corner
+                </button>
+
+                <p
+                    id="private-password-message"
+                    class="private-password-message"
+                ></p>
+
+            </div>
+
+        </div>
+    `;
+
+    document.body.appendChild(panel);
+
+    requestAnimationFrame(function () {
+        panel.classList.add("show");
+    });
+
+    document.body.style.overflow = "hidden";
+}
+
+
+function unlockPrivateCorner() {
+
+    const input =
+        document.getElementById("private-password");
+
+    const message =
+        document.getElementById("private-password-message");
+
+    if (!input || !message) return;
+
+    const enteredPassword =
+        input.value.trim();
+
+    /* YAHAN APNA CUSTOM PASSWORD LIKHNA HAI */
+    const correctPassword = "1 20 1 8 1 13 18 1 13 21 11 8 19 5 20 9 8";
+
+    if (enteredPassword === correctPassword) {
+
+        message.textContent =
+            "Access granted. Welcome to my Private Corner.";
+
+        message.style.color = "#00d2ff";
+
+        setTimeout(function () {
+
+            closePrivateCorner();
+
+            openPrivateCornerContent();
+
+        }, 700);
+
+    } else {
+
+        message.textContent =
+            "Password sahi nahi hai. Dobara try karo.";
+
+        message.style.color = "#ff6b6b";
+
+        input.value = "";
+
+        input.focus();
+    }
+}
+
+
+function openPrivateCornerContent() {
+
+    const existing =
+        document.getElementById("private-corner-content-panel");
+
+    if (existing) return;
+
+    const panel = document.createElement("div");
+
+    panel.id = "private-corner-content-panel";
+    panel.className = "private-detail-panel";
+
+    panel.innerHTML = `
+        <div class="private-detail-inner">
+
+            <button
+                type="button"
+                class="private-detail-close"
+                onclick="closePrivateCornerContent()"
+            >
+                &times;
+            </button>
+
+            <div class="private-detail-icon">
+                <i class="fas fa-unlock"></i>
+            </div>
+
+            <span class="unlock-badge">
+                <i class="fas fa-unlock"></i>
+                Private Corner Unlocked
+            </span>
+
+            <h2>Welcome to my real side.</h2>
+
+            <p class="private-detail-intro">
+                Yahan meri kuch personal, random aur real-life
+                cheezein hongi. Ye section kisi ko impress karne
+                ke liye nahi hai. Bas mujhe thoda aur genuinely
+                samajhne ke liye hai.
+            </p>
+
+            <div class="detail-block">
+
+                <h3>Private Gallery</h3>
+
+                <p>
+                    Friends, random moments, old memories,
+                    funny photos aur meri normal life ke
+                    kuch moments yahan rahenge.
+                </p>
+
+            </div>
+
+            <div class="detail-block">
+
+                <h3>My Story</h3>
+
+                <p>
+                    Meri life ke kuch experiences aur woh
+                    cheezein jo mujhe andar se change karti rahi hain.
+                </p>
+
+            </div>
+
+            <div class="detail-block">
+
+                <h3>Relationship & Mindset</h3>
+
+                <p>
+                    Trust, honesty, loyalty, communication,
+                    understanding aur relationship ko lekar
+                    meri genuine thinking.
+                </p>
+
+            </div>
+
+            <div class="detail-block">
+
+                <h3>Things I Don't Usually Tell People</h3>
+
+                <p>
+                    Kuch personal thoughts aur chhoti-chhoti
+                    baatein jo main normally har kisi ke saath share nahi karta.
+                </p>
+
+            </div>
+
+            <div class="detail-block">
+
+                <h3>Random Me</h3>
+
+                <p>
+                    Kuch random memories, funny moments,
+                    habits aur normal life ki chhoti-chhoti cheezein.
+                </p>
+
+            </div>
+
+        </div>
+    `;
+
+    document.body.appendChild(panel);
+
+    requestAnimationFrame(function () {
+        panel.classList.add("show");
+    });
+
+    document.body.style.overflow = "hidden";
+}
+
+
+function closePrivateCorner() {
+
+    const panel =
+        document.getElementById("private-corner-panel");
+
+    if (!panel) return;
+
+    panel.classList.remove("show");
+
+    setTimeout(function () {
+        panel.remove();
+        document.body.style.overflow = "";
+    }, 350);
+}
+
+
+function closePrivateCornerContent() {
+
+    const panel =
+        document.getElementById("private-corner-content-panel");
+
+    if (!panel) return;
+
+    panel.classList.remove("show");
+
+    setTimeout(function () {
+        panel.remove();
+        document.body.style.overflow = "";
+    }, 350);
+}

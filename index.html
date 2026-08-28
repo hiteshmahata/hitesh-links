@@ -169,7 +169,7 @@ aria-label="Spotify">
 
     <h2>Something More</h2>
 
-    <!-- DOB UNLOCK CARD -->
+    <!-- DOB UNLOCK -->
 
     <div class="glass-card something-more-card">
 
@@ -177,17 +177,17 @@ aria-label="Spotify">
             <i class="fas fa-lock"></i>
         </div>
 
-        <h3>A little more about me</h3>
+        <h3>Thoda Aur Janna Hai?</h3>
 
         <p>
-            Some things are not on the public side of this website.
-            If you genuinely want to know me better, you can unlock this space.
+            Agar tum genuinely mujhe thoda aur samajhna chahte ho,
+            to yahan se ek chhota sa private side unlock kar sakte ho.
         </p>
 
         <div class="dob-box">
 
             <label for="dob">
-                Enter the date to continue
+                Aage badhne ke liye date enter karo
             </label>
 
             <div class="dob-input-row">
@@ -231,12 +231,13 @@ aria-label="Spotify">
                 Unlocked
             </span>
 
-            <h3>Now you know a little more.</h3>
+            <h3>Ab thoda aur jaan sakte ho.</h3>
 
             <p>
-                Everything here is written honestly from my perspective.
-                This space is not here to impress you.
-                It is here so you can understand me better.
+                Yahan jo bhi hai, woh meri taraf se honestly likha gaya hai.
+                Kisi ko impress karne ke liye nahi.
+                Bas agar tum genuinely mujhe samajhna chahte ho,
+                to yahan thoda aur dekh sakte ho.
             </p>
 
         </div>
@@ -253,17 +254,17 @@ aria-label="Spotify">
             <h3>Know Me Better</h3>
 
             <p>
-                A little more about who I am, how I think,
-                and the things that usually stay away from my public profile.
+                Main kis type ka insaan hoon,
+                kaise sochta hoon aur normally cheezein kaise dekhta hoon.
             </p>
 
             <button
-    class="private-open-btn"
-    type="button"
-    onclick="openPrivateSection('know-me')"
->
-    Explore
-</button>
+                class="private-open-btn"
+                type="button"
+                onclick="openPrivateSection('know-me')"
+            >
+                Dekho
+            </button>
 
         </div>
 
@@ -279,60 +280,17 @@ aria-label="Spotify">
             <h3>If You Like Me</h3>
 
             <p>
-                If you genuinely want to know me or talk to me,
-                you don't need to overthink it.
+                Agar tum mujhe pasand karte ho,
+                lekin baat start karne mein nervous ho,
+                to pehle ye padh sakte ho.
             </p>
 
             <button
-    class="private-open-btn"
-    type="button"
-    onclick="openIfYouLikeMe()"
->
-    Read This
-</button>
-
-        </div>
-
-
-        <!-- RELATIONSHIP VIEW -->
-
-        <div class="private-card">
-
-            <div class="private-card-icon">
-                <i class="fas fa-comments"></i>
-            </div>
-
-            <h3>My Relationship View</h3>
-
-            <p>
-                My thoughts about understanding,
-                communication, loyalty, honesty and commitment.
-            </p>
-
-            <button class="private-open-btn">
-                Read This
-            </button>
-
-        </div>
-
-
-        <!-- PRIVATE GALLERY -->
-
-        <div class="private-card">
-
-            <div class="private-card-icon">
-                <i class="fas fa-images"></i>
-            </div>
-
-            <h3>Private Gallery</h3>
-
-            <p>
-                Personal photos, old memories,
-                childhood moments, friends and random moments.
-            </p>
-
-            <button class="private-open-btn">
-                View Gallery
+                class="private-open-btn"
+                type="button"
+                onclick="openIfYouLikeMe()"
+            >
+                Ye Padho
             </button>
 
         </div>
@@ -349,12 +307,15 @@ aria-label="Spotify">
             <h3>My Music</h3>
 
             <p>
-                Some songs I like, listen to,
-                or connect with at different moments.
+                Kuch songs jo mujhe pasand hain
+                ya alag-alag moments ke saath connected hain.
             </p>
 
-            <button class="private-open-btn">
-                Open Music
+            <button
+                class="private-open-btn"
+                type="button"
+            >
+                Music
             </button>
 
         </div>
@@ -371,11 +332,14 @@ aria-label="Spotify">
             <h3>Random Me</h3>
 
             <p>
-                Small things, random facts and little details
-                that you probably wouldn't know otherwise.
+                Chhoti-chhoti random baatein,
+                habits aur aisi cheezein jo normally pata nahi chalti.
             </p>
 
-            <button class="private-open-btn">
+            <button
+                class="private-open-btn"
+                type="button"
+            >
                 Discover
             </button>
 
@@ -393,41 +357,51 @@ aria-label="Spotify">
             <h3>Talk To Me</h3>
 
             <p>
-                If you wanted to talk but didn't know how to start,
-                this is probably the easiest place to begin.
+                Agar baat karna chahte ho lekin samajh nahi aa raha
+                kaise start karein, yahan se start kar sakte ho.
             </p>
 
-            <button class="private-open-btn">
+            <button
+                class="private-open-btn"
+                type="button"
+            >
                 Say Hi
             </button>
 
         </div>
 
 
-        <!-- SECOND PRIVATE LEVEL -->
+        <!-- PRIVATE CORNER -->
 
-        <div class="private-card private-level">
+<div class="private-card private-level">
 
-            <div class="private-card-icon">
-                <i class="fas fa-lock"></i>
-            </div>
+    <div class="private-card-icon">
+        <i class="fas fa-lock"></i>
+    </div>
 
-            <h3>Private Corner</h3>
+    <h3>Private Corner</h3>
 
-            <p>
-                There is another side beyond this.
-                This one needs a separate password.
-            </p>
+    <p>
+        Yahan meri kuch aur personal aur random cheezein hongi.
+        Access ke liye custom password chahiye.
+    </p>
 
-            <button class="private-open-btn">
-                Enter Password
-            </button>
+    <button
+        class="private-open-btn"
+        type="button"
+        onclick="openPrivateCorner()"
+    >
+        Enter
+    </button>
+
+</div>
 
         </div>
 
     </div>
 
 </section>
+
 <!-- ABOUT -->
 
 <section id="about">
