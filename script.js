@@ -266,3 +266,275 @@ if (somethingMoreLink && somethingMoreSection) {
     });
 
 }
+/* ==========================
+   KNOW ME BETTER
+========================== */
+
+function openPrivateSection(sectionName) {
+
+    if (sectionName !== "know-me") return;
+
+    const existing = document.getElementById("know-me-panel");
+
+    if (existing) {
+        existing.remove();
+        return;
+    }
+
+    const panel = document.createElement("div");
+
+    panel.id = "know-me-panel";
+    panel.className = "private-detail-panel";
+
+    panel.innerHTML = `
+        <div class="private-detail-inner">
+
+            <button
+                type="button"
+                class="private-detail-close"
+                onclick="closePrivateSection()"
+            >
+                &times;
+            </button>
+
+            <div class="private-detail-icon">
+                <i class="fas fa-user"></i>
+            </div>
+
+            <span class="unlock-badge">
+                <i class="fas fa-unlock"></i>
+                Know Me Better
+            </span>
+
+            <h2>A little more about me</h2>
+
+            <p class="private-detail-intro">
+                If you really want to know me, this is where
+                you can see the side of me that I don't usually
+                show publicly.
+            </p>
+
+
+            <div class="detail-block">
+
+                <h3>I'm pretty direct</h3>
+
+                <p>
+                    I prefer people to be honest and direct with me.
+                    If something is on your mind, you can say it.
+                    There is usually no need to hide things from me.
+                </p>
+
+            </div>
+
+
+            <div class="detail-block">
+
+                <h3>Trust takes time</h3>
+
+                <p>
+                    I don't blindly trust people.
+                    Trust is something that builds over time
+                    through honesty, consistency and actions.
+                </p>
+
+            </div>
+
+
+            <div class="detail-block">
+
+                <h3>I care more than I show</h3>
+
+                <p>
+                    I can keep many small things to myself.
+                    Sometimes I overthink those little things
+                    instead of talking about them immediately.
+                </p>
+
+            </div>
+
+
+            <div class="detail-block">
+
+                <h3>If I make a mistake</h3>
+
+                <p>
+                    If I know I am wrong, I don't have a problem
+                    saying sorry. I would rather fix the situation
+                    than protect my ego.
+                </p>
+
+            </div>
+
+
+            <div class="detail-block">
+
+                <h3>One thing I really value</h3>
+
+                <p>
+                    Genuine people.
+                    Someone who can talk openly, stay loyal,
+                    give importance to the relationship and
+                    still respect each other's freedom.
+                </p>
+
+            </div>
+
+
+            <div class="detail-final">
+
+                <p>
+                    You don't have to believe everything you read here.
+                    Take your time, talk to me, and decide for yourself.
+                </p>
+
+            </div>
+
+        </div>
+    `;
+
+    document.body.appendChild(panel);
+
+    requestAnimationFrame(function () {
+        panel.classList.add("show");
+    });
+
+    document.body.style.overflow = "hidden";
+}
+
+
+function closePrivateSection() {
+
+    const panel = document.getElementById("know-me-panel");
+
+    if (!panel) return;
+
+    panel.classList.remove("show");
+
+    setTimeout(function () {
+        panel.remove();
+        document.body.style.overflow = "";
+    }, 350);
+}
+/* ==========================
+   IF YOU LIKE ME
+========================== */
+
+function openIfYouLikeMe() {
+
+    const existing =
+        document.getElementById("if-you-like-me-panel");
+
+    if (existing) {
+        closeIfYouLikeMe();
+        return;
+    }
+
+    const panel = document.createElement("div");
+
+    panel.id = "if-you-like-me-panel";
+    panel.className = "private-detail-panel";
+
+    panel.innerHTML = `
+        <div class="private-detail-inner">
+
+            <button
+                type="button"
+                class="private-detail-close"
+                onclick="closeIfYouLikeMe()"
+            >
+                &times;
+            </button>
+
+            <div class="private-detail-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+
+            <span class="unlock-badge">
+                <i class="fas fa-heart"></i>
+                If You Like Me
+            </span>
+
+            <h2>Don't overthink it.</h2>
+
+            <p class="private-detail-intro">
+                If you genuinely want to know me or talk to me,
+                you don't need a perfect reason or a perfect opening.
+            </p>
+
+            <div class="detail-block">
+                <h3>Being nervous is normal.</h3>
+
+                <p>
+                    I understand that starting a conversation can be difficult,
+                    especially when you genuinely like someone.
+                    You don't have to say everything at once.
+                </p>
+            </div>
+
+            <div class="detail-block">
+                <h3>Start slowly.</h3>
+
+                <p>
+                    You can simply start with a normal conversation.
+                    Let things become comfortable naturally.
+                    There is no need to rush anything.
+                </p>
+            </div>
+
+            <div class="detail-block">
+                <h3>Just be honest with me.</h3>
+
+                <p>
+                    You can talk to me directly.
+                    Tell me what you actually think or feel.
+                    I would rather hear the truth than a carefully made story.
+                </p>
+            </div>
+
+            <div class="detail-block">
+                <h3>You don't need to be afraid of being judged.</h3>
+
+                <p>
+                    If you genuinely want to talk to me,
+                    you can approach me.
+                    I will listen and try to understand before making any judgement.
+                </p>
+            </div>
+
+            <div class="detail-final">
+                <p>
+                    If you really want to know me,
+                    talk to me honestly.
+                    Maybe that's the easiest way to find out
+                    whether we actually understand each other.
+                </p>
+            </div>
+
+        </div>
+    `;
+
+    document.body.appendChild(panel);
+
+    requestAnimationFrame(function () {
+        panel.classList.add("show");
+    });
+
+    document.body.style.overflow = "hidden";
+}
+
+
+function closeIfYouLikeMe() {
+
+    const panel =
+        document.getElementById("if-you-like-me-panel");
+
+    if (!panel) return;
+
+    panel.classList.remove("show");
+
+    setTimeout(function () {
+        panel.remove();
+        document.body.style.overflow = "";
+    }, 350);
+}
