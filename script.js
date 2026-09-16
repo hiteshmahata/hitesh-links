@@ -703,68 +703,183 @@ function openPrivateCornerContent() {
                 Private Corner Unlocked
             </span>
 
-            <h2>Welcome to my real side.</h2>
+            <h2>Ab tum mujhe thoda aur genuinely jaan sakte ho.</h2>
 
             <p class="private-detail-intro">
-                Yahan meri kuch personal, random aur real-life
-                cheezein hongi. Ye section kisi ko impress karne
-                ke liye nahi hai. Bas mujhe thoda aur genuinely
-                samajhne ke liye hai.
+                Agar tum yahan tak aaye ho, to shayad tum sirf
+                surface level par mujhe jaan-na nahi chahte.
+                Yahan meri kuch personal, random aur real baatein hain.
+                Kisi ko impress karne ke liye nahi.
+                Bas mujhe samajhne ke liye.
             </p>
 
+
             <div class="detail-block">
 
-                <h3>Private Gallery</h3>
+                <h3>🧠 Main kaisa hoon?</h3>
 
                 <p>
-                    Friends, random moments, old memories,
-                    funny photos aur meri normal life ke
-                    kuch moments yahan rahenge.
+                    Main har cheez har kisi ko nahi batata.
+                    Chhoti-chhoti baatein bhi kabhi-kabhi apne andar rakh leta hoon.
+                    Main kisi par emotionally attach ho jaaun,
+                    to usse detach hone mein mujhe time lagta hai.
+                    Trust bhi mere liye time ke saath build hota hai.
                 </p>
 
             </div>
 
+
             <div class="detail-block">
 
-                <h3>My Story</h3>
+                <h3>❤️ Relationship ko lekar meri thinking</h3>
 
                 <p>
-                    Meri life ke kuch experiences aur woh
-                    cheezein jo mujhe andar se change karti rahi hain.
+                    Mere liye relationship ka matlab sirf baat karna nahi hai.
+                    Loyalty, honesty, time, communication, support aur understanding
+                    important hain.
+                    Agar koi genuinely mere saath hai,
+                    to main bhi uske liye genuinely loyal rahunga.
                 </p>
 
             </div>
 
+
             <div class="detail-block">
 
-                <h3>Relationship & Mindset</h3>
+                <h3>💬 Agar kabhi mujhse baat karni ho</h3>
 
                 <p>
-                    Trust, honesty, loyalty, communication,
-                    understanding aur relationship ko lekar
-                    meri genuine thinking.
+                    Nervous hone ki zarurat nahi hai.
+                    Directly sab kuch bolna zaruri nahi.
+                    Normal conversation se start karo.
+                    Dheere-dheere comfort build hoga,
+                    phir jo kehna hai honestly keh sakte ho.
                 </p>
 
             </div>
 
+
             <div class="detail-block">
 
-                <h3>Things I Don't Usually Tell People</h3>
+                <h3>🌙 Jab mood off hota hai</h3>
 
                 <p>
-                    Kuch personal thoughts aur chhoti-chhoti
-                    baatein jo main normally har kisi ke saath share nahi karta.
+                    Main normally har time music nahi sunta.
+                    Lekin jab mood genuinely off hota hai,
+                    tab music sunna achha lagta hai.
+                    Kabhi-kabhi close friend ke saath time spend karna
+                    ya bas bahar nikal jaana bhi mood completely change kar deta hai.
                 </p>
 
             </div>
 
+
             <div class="detail-block">
 
-                <h3>Random Me</h3>
+                <h3>🏍️ Chhoti cheezein bhi matter karti hain</h3>
 
                 <p>
-                    Kuch random memories, funny moments,
-                    habits aur normal life ki chhoti-chhoti cheezein.
+                    Kabhi-kabhi ek random call,
+                    ek unexpected plan ya ek simple conversation
+                    bhi bahut kuch change kar deti hai.
+                    Mere liye har important moment bada hona zaruri nahi.
+                    Chhoti cheezein bhi yaad reh jaati hain.
+                </p>
+
+            </div>
+
+
+            <div class="detail-block">
+
+                <h3>📚 Study & Life</h3>
+
+                <p>
+                    Main perfect nahi hoon.
+                    Kabhi padhai hoti hai, kabhi nahi hoti.
+                    Kabhi cheezein control mein lagti hain,
+                    aur kabhi sab kuch thoda messy ho jata hai.
+                    Lekin main apni life ko better karne ki koshish karta rehta hoon.
+                </p>
+
+            </div>
+
+
+            <div class="detail-block">
+
+                <h3>📸 Private Gallery</h3>
+
+                <p>
+                    Yahan meri normal life ke photos rahenge.
+                    Friends ke saath moments, random selfies,
+                    funny photos, old memories, childhood moments
+                    aur aisi photos jo public gallery mein rakhne ka koi reason nahi.
+                </p>
+
+                <p>
+                    Ye gallery perfect photos ke liye nahi hai.
+                    Ye meri real aur random side ke liye hai.
+                                    <button
+                    type="button"
+                    class="private-open-btn"
+                    onclick="openPrivateGallery()"
+                >
+                    📸 Private Gallery Dekho
+                </button>
+                    
+                </p>
+
+            </div>
+
+
+            <div class="detail-block">
+
+                <h3>🧴 Self Care</h3>
+
+                <p>
+                    Main apni personal care ko bhi importance deta hoon.
+                    Skin care, grooming aur apne appearance ka dhyan rakhna
+                    mere liye normal part of life hai.
+                    Is section mein uski bhi kuch real cheezein share ki ja sakti hain.
+                </p>
+
+            </div>
+
+
+            <div class="detail-block">
+
+                <h3>😂 Random Me</h3>
+
+                <p>
+                    Kuch cheezein bilkul random hongi.
+                    Funny moments, weird photos, random thoughts,
+                    habits, favourite things aur aisi chhoti-chhoti baatein
+                    jo kisi normal introduction mein kabhi pata nahi chalti.
+                </p>
+
+            </div>
+
+
+            <div class="detail-block">
+
+                <h3>🔐 Why is this section private?</h3>
+
+                <p>
+                    Kyunki ye information main normally sabko nahi batata.
+                    Agar tum yahan tak aaye ho,
+                    to tum mujhe thoda aur genuinely samajhna chahte ho.
+                    Isliye yahan jo bhi hai,
+                    woh public image se thoda zyada personal hai.
+                </p>
+
+            </div>
+
+
+            <div class="detail-final">
+
+                <p>
+                    Ye meri perfect image nahi hai.
+                    Ye bas meri thodi zyada real side hai.
+                    Jo samajhna hai, time lekar samjho.
                 </p>
 
             </div>
@@ -802,6 +917,108 @@ function closePrivateCornerContent() {
 
     const panel =
         document.getElementById("private-corner-content-panel");
+
+    if (!panel) return;
+
+    panel.classList.remove("show");
+
+    setTimeout(function () {
+        panel.remove();
+        document.body.style.overflow = "";
+    }, 350);
+}
+/* ==========================
+   PRIVATE GALLERY
+========================== */
+
+function openPrivateGallery() {
+
+    const existing =
+        document.getElementById("private-gallery-panel");
+
+    if (existing) {
+        closePrivateGallery();
+        return;
+    }
+
+    const panel = document.createElement("div");
+
+    panel.id = "private-gallery-panel";
+    panel.className = "private-detail-panel";
+
+    panel.innerHTML = `
+        <div class="private-detail-inner">
+
+            <button
+                type="button"
+                class="private-detail-close"
+                onclick="closePrivateGallery()"
+            >
+                &times;
+            </button>
+
+            <div class="private-detail-icon">
+                <i class="fas fa-images"></i>
+            </div>
+
+            <span class="unlock-badge">
+                <i class="fas fa-lock-open"></i>
+                Private Gallery
+            </span>
+
+            <h2>Meri Random Life 📸</h2>
+
+            <p class="private-detail-intro">
+                Yahan meri normal life ke random moments,
+                friends ke saath memories, selfies, funny photos
+                aur kuch personal memories rahengi.
+            </p>
+
+            <div class="private-gallery-grid">
+
+                <div class="private-photo">
+                    <img src="private 1.jpg" alt="Private Photo 1" onclick="openModal(this)">
+                </div>
+
+                <div class="private-photo">
+                    <img src="private 2.jpg" alt="Private Photo 2" onclick="openModal(this)">
+                </div>
+
+                <div class="private-photo">
+                    <img src="private 3.jpg" alt="Private Photo 3" onclick="openModal(this)">
+                </div>
+
+                <div class="private-photo">
+                    <img src="private 4.jpg" alt="Private Photo 4" onclick="openModal(this)">
+                </div>
+
+                <div class="private-photo">
+                    <img src="private 5.jpg" alt="Private Photo 5" onclick="openModal(this)">
+                </div>
+
+                <div class="private-photo">
+                    <img src="private 6.jpg" alt="Private Photo 6" onclick="openModal(this)">
+                </div>
+
+            </div>
+
+        </div>
+    `;
+
+    document.body.appendChild(panel);
+
+    requestAnimationFrame(function () {
+        panel.classList.add("show");
+    });
+
+    document.body.style.overflow = "hidden";
+}
+
+
+function closePrivateGallery() {
+
+    const panel =
+        document.getElementById("private-gallery-panel");
 
     if (!panel) return;
 
